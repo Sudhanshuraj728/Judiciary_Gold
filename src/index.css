@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: rgba(255, 255, 255, 0.96);
+  background: #090909;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(200, 162, 58, 0.9) rgba(255, 255, 255, 0.06);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top, rgba(200, 162, 58, 0.12), transparent 26%),
+    linear-gradient(180deg, #111111 0%, #090909 48%, #050505 100%);
+  font-family: 'Poppins', sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(200, 162, 58, 0.95), rgba(171, 131, 34, 0.95));
+  border-radius: 999px;
+  border: 2px solid rgba(17, 17, 17, 0.9);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, rgba(233, 195, 97, 0.98), rgba(200, 162, 58, 0.98));
+}
+
+#root {
+  min-height: 100vh;
+}
+
+section,
+footer {
+  scroll-margin-top: 6rem;
+}
+
+a,
+button,
+input,
+textarea,
+select {
+  transition-property: color, background-color, border-color, box-shadow, transform, opacity;
+  transition-duration: 180ms;
+  transition-timing-function: ease;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(200, 162, 58, 0.32), 0 0 0 4px rgba(9, 9, 9, 0.95);
+}
+
+::selection {
+  background: rgba(200, 162, 58, 0.3);
+  color: #fff;
+}
+
+.gold-border {
+  border: 1px solid rgba(200, 162, 58, 0.18);
+}
+
+.glass-panel {
+  background: rgba(17, 17, 17, 0.72);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.premium-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 54px 54px;
+}
+
+.content-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 1000px;
+}
